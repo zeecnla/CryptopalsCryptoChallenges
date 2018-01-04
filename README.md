@@ -1,3 +1,3 @@
 # CryptopalsCryptoChallenges
 
-Contains my implementation for these challenges. I am doing it in Python to learn a new language as I learn more about crypto.
+Contains my implementations for these challenges in python. I am also learning python as I do these.
