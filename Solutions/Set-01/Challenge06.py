@@ -14,13 +14,26 @@ def Hamming_Distance(a,b):
             counter = counter + 1
         i = i+1
     return counter
+
+def find_Key_Size(a):
+    max_score = 0
+    res = 0
+    for key in range(2,41):
+        first, second = a[key*5], a[key*10] 
+        score = Hamming_Distance(first,second)/key
+        if score > max_score:
+            max_score = score
+            res = key
+    return res
+
+def decodeBase64(t):
+    return base64.b64decode(t)
+
   
 def Break_Repeating_XOR():
-    
-    #Length of the key
-    keysize = (list(bytes(range(2,41))))
-    print(keysize)
     file_path = "H:\Projects\CryptopalsCryptoChallenges\Solutions\Set-01\\assets\\6.txt"    
-    #with open(file_path, "r") as f:
-     
+    with open(file_path, "r") as f:
+        lines = [line.strip('\n') for line in f]
+        find_Key_Size(base64.b64decode(lines))
+
 Break_Repeating_XOR()

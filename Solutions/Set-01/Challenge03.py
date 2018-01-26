@@ -18,6 +18,7 @@ freq = {"a": 0.08167, "b": 0.01492, "c": 0.02782, "d": 0.04253, "e": 0.12702,
 def xorString(words, c):
 
     word = binascii.unhexlify(words)
+    print(word)
     return ''.join(chr(num ^ c) for num in word)
 
 def calculate_score(s):
@@ -36,4 +37,11 @@ def xorCipher(encoded_string):
             decrypted, max_score, key = possible, score, key
 
     return decrypted
+
+
+encoded_hex_string = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
+result = xorCipher(encoded_hex_string)
+answer = "Cooking MC's like a pound of bacon"
+assert(result==answer), "Test 3, failed"
+
 
