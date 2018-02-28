@@ -1,10 +1,11 @@
 import Challenge01
 import Challenge02
 import Challenge03
+import Challenge05
 import unittest
 
 
-
+# Will begin to review the challenges to finally complete them 
 class TestChallengesSet1(unittest.TestCase):
     def test_challenge_1(self):
         answer = "SSdtIGtpbGxpbmcgeW91ciBicmFpbiBsaWtlIGEgcG9pc29ub3VzIG11c2hyb29t"
@@ -25,6 +26,9 @@ class TestChallengesSet1(unittest.TestCase):
         output = Challenge03.xorCipher(encoded_hex_string)
         answer = "Cooking MC's like a pound of bacon"
         self.assertEqual(output,answer)
+
+    def test_challenge_5(self):
+        self.assertEqual(1,1)
 
 if __name__ == '__main__':
     unittest.main()
