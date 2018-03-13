@@ -3,11 +3,10 @@
 import Challenge03
 
 
-def detectSingleCharacterXOR():
+def detectSingleCharacterXOR(file_path):
     decrypted=""
     max_score = 0
-    char = 0
-    file_path = "H:\Projects\CryptopalsCryptoChallenges\Solutions\Set-01\\assets\strings.txt"    
+    char = 0  
     with open(file_path, "r") as f:
         
         lines = [line.strip('\n') for line in f]

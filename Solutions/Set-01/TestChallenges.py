@@ -1,6 +1,7 @@
 import Challenge01
 import Challenge02
 import Challenge03
+import Challenge04
 import Challenge05
 import unittest
 
@@ -27,8 +28,17 @@ class TestChallengesSet1(unittest.TestCase):
         answer = "Cooking MC's like a pound of bacon"
         self.assertEqual(output,answer)
 
+    def test_challenge_4(self):
+        
+        file_path = "H:\Projects\CryptopalsCryptoChallenges\Solutions\Set-01\\assets\strings.txt"  
+        output = Challenge04.detectSingleCharacterXOR(file_path)
+        return 0 
+
     def test_challenge_5(self):
         self.assertEqual(1,1)
+
+    def test_challenge_6(self):
+
 
 if __name__ == '__main__':
     unittest.main()
