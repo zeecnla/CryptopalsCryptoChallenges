@@ -2,11 +2,9 @@
 # Convert Hex to base64
 import binascii
 import base64
-import codecs
 
+#operates in bytes
 def HexToBase64(value):
-
-    encoded_string = str.encode(value)
-    input_bytes = binascii.unhexlify(encoded_string) 
+    input_bytes = binascii.unhexlify(value) 
     output = base64.b64encode(input_bytes)
     return output
