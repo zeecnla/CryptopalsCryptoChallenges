@@ -2,6 +2,7 @@ import Challenge01
 import Challenge02
 import Challenge03
 import Challenge04
+import Challenge05
 import unittest
 
 
@@ -31,11 +32,18 @@ class TestChallengesSet1(unittest.TestCase):
     def test_challenge_4(self):
         file_path = "C:\\Users\\Admin\Documents\\GitHub\\CryptopalsCryptoChallenges\\Solutions\\Set-01\\assets\\strings.txt"  
         output = Challenge04.detectSingleCharacterXOR(file_path)
-        print(output)
-    '''
-    def test_challenge_5(self):
-        self.assertEqual(1,1)
+        answer = "Now that the party is jumping\n"
+        self.assertEqual(output,answer)
 
+    def test_challenge_5(self):
+        key = 'ICE'
+        phrase = '''Burning 'em, if you ain't quick and nimble
+I go crazy when I hear a cymbal'''
+        answer = '''0b3637272a2b2e63622c2e69692a23693a2a3c6324202d623d63343c2a26226324272765272
+a282b2f20430a652e2c652a3124333a653e2b2027630c692b20283165286326302e27282f'''
+        output = Challenge05.RepeatingXOR(phrase,key)
+        self.assertEqual(output,answer)
+    '''
     def test_challenge_6(self):'''
 
 

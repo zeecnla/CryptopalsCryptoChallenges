@@ -17,7 +17,6 @@ freq = {"a": 0.08167, "b": 0.01492, "c": 0.02782, "d": 0.04253, "e": 0.12702,
 
 def xorString(words, c):
     word = binascii.unhexlify(words)
-    print(word)
     return ''.join(chr(num ^ c) for num in word)
 
 def calculate_score(s):

@@ -9,9 +9,10 @@ def RepeatingXOR(word, key):
     for letter in word:
         if(counter == len(key)):
             counter=0
-        encrypted_phrase+=bytes([letter ^ key[counter]])
+        a = binascii.hexlify(letter.encode())
+        b =binascii.hexlify(key[counter].encode())
+        encrypted_phrase+=bytes([a^b])
         counter +=1
-    return encrypted_phrase
 
 
 
