@@ -5,14 +5,17 @@ import base64
 
 def RepeatingXOR(word, key):
     counter = 0
-    encrypted_phrase= b''
+    encrypted_phrase = ""
     for letter in word:
         if(counter == len(key)):
             counter=0
-        a = binascii.hexlify(letter.encode())
-        b =binascii.hexlify(key[counter].encode())
-        encrypted_phrase+=bytes([a^b])
+        a = ord(letter)
+        b = ord(key[counter])
+        encrypted_phrase+= (hex(a^b))
         counter +=1
+    return encrypted_phrase
+
+    
 
 
 

@@ -22,7 +22,7 @@ class TestChallengesSet1(unittest.TestCase):
         answer = "746865206b696420646f6e277420706c6179"
         output = Challenge02.XOROperation(firstString, secondString)
         self.assertEqual(output,answer)
-    
+        
     def test_challenge_3(self):
         encoded_hex_string = "1b37373331363f78151b7f2b783431333d78397828372d363c78373e783a393b3736"
         output = Challenge03.xorCipher(encoded_hex_string)
@@ -30,7 +30,8 @@ class TestChallengesSet1(unittest.TestCase):
         self.assertEqual(output,answer)
     
     def test_challenge_4(self):
-        file_path = "C:\\Users\\Admin\Documents\\GitHub\\CryptopalsCryptoChallenges\\Solutions\\Set-01\\assets\\strings.txt"  
+        file_path = "/Users/Cesar-Melchor/Documents/Github/CryptopalsCryptoChallenges/Solutions/Set-01/assets/strings.txt"
+        #file_path = "C:\\Users\\Admin\Documents\\GitHub\\CryptopalsCryptoChallenges\\Solutions\\Set-01\\assets\\strings.txt"  
         output = Challenge04.detectSingleCharacterXOR(file_path)
         answer = "Now that the party is jumping\n"
         self.assertEqual(output,answer)
